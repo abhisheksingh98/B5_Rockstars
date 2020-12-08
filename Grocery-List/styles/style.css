@@ -35,3 +35,58 @@ form button:hover {
   background: rgb(37, 100, 236);
   color: white;
 }
+
+.grocery__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grocery__list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.grocery {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5 ease;
+}
+
+.grocery li {
+  flex: 1;
+}
+
+.delete__btn,
+.checked__btn {
+  background: rgb(250, 10, 10);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.checked__btn {
+  background: rgb(69, 180, 69);
+}
+
+.grocery__item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
