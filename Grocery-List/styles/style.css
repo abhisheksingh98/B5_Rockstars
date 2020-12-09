@@ -1,7 +1,8 @@
 body {
-  background-color: rgb(233, 190, 73);
-  color: black;
+  background-image: linear-gradient(135deg, #7b4397, #004e92);
+  color: rgba(247, 251, 252, 0.752941);
   min-height: 100vh;
+  font-family: Montserrat, sans-serif;
 }
 
 header {
@@ -56,6 +57,7 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   transition: all 0.5 ease;
+  border-radius: 1rem;
 }
 
 .grocery li {
