@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Grocery List</title>
-</head>
-<body>
-        <header>
-            <h1>Your Grocery List</h1>
-        </header>
-        <form action="">
-            <input type="text" class="grocery__input">
-            <button class="grocery__button" type="submit">
-                <i class="fas fa-plus-square"></i>
-            </button>
-            <button class="save__button" type="submit" style="display: none;">
-                <i class="far fa-save"></i>            
-            </button>
-            
-        </form>
-        <div class="grocery__container">
-            <ul class="grocery__list">   
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/lumen/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/78ac1c574d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./data-models/grocery.js"></script>
+    <script src="./data-models/store.js"></script>
+    <script src="./views/user-interface.js"></script>
+    <script src="./log.js"></script>
+    <script src="./init.js"></script>
+
+    <title>My-Grocery-List</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-4 text-center">
+        <i class="fas fa-shopping-cart" style="color: rgb(30, 145, 30);"></i> My<span
+          class="text-success"
+          >Grocery</span
+        >List
+      </h1>
+      <form id="grocery-form" style="margin: 10px; margin-left: 28vh; margin-right: 28vh;">
+        <div class="form-group" >
+          <label for="item">Item</label>
+          <input type="text" id="item" class="form-control" />
         </div>
-      
-        <script src="./js/script.js"></script>
-</body>
+        <input
+          type="submit"
+          value="Add Grocery"
+          class="btn btn-success btn-block "
+        
+        />
+      </form>
+      <table class="table table-striped mt-5" style="margin: 20vh; margin-left: 28vh; margin-right: 28vh;  width: 69%;">
+        <thead >
+          <tr>
+            <th>Item</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="grocery-list"></tbody>
+      </table>
+    </div>
+    <script src="./interactions/addGrocery.js"></script>
+    <script src="./interactions/showGrocery.js"></script>
+    <script src="./interactions/removeGrocery.js"></script>
+  </body>
 </html>
